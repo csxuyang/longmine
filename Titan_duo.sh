@@ -75,4 +75,9 @@ docker exec $container_id bash -c "\
 
 done
 
+for i in $(seq 1 $container_count)
+do
+    docker restart "titan$i"
+done
+
 echo "==============================所有节点均已设置并启动===================================."
